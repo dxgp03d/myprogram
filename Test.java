@@ -1,26 +1,25 @@
-package DEMO2;
+package DEMO3;
 
 public class Test {
 
-	public static void main(String[] args) {
-		JavaEE ee=new JavaEE();
-		Network net=new Network();
-
+	 public static void main(String[] args) {
+		Animal a1=new Cat();
+		Animal a2=new Dog();
 		
-		ee.setName("Gey");
-		ee.setID("Develop001");
+		a1.eat();
+		a2.eat();
 		
-		net.setName("Alice");
-		net.setID("Network001");
-		
-		//System.out.println(ee.getName()+ee.getID());
-		//System.out.println(net.getName()+net.getID());
+		if(a1 instanceof Cat){
+			Cat c=(Cat)a1;
+			c.catchMouse();
 				
-
+		}
 		
-		ee.work();
-		net.work();
+		if(a2 instanceof Dog){
+			Dog c=(Dog)a2;
+			c.watchHouse();
+				
+		}
 
 	}
-
 }
